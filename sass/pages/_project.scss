@@ -1,0 +1,299 @@
+/***** Project Details ******/
+
+.section-project {
+  padding: 74px 0 40px;
+  @include max($sm) {
+    padding: 40px 0;
+  }
+  .project-h {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    @include max($xxl) {
+      flex-wrap: wrap;
+    }
+  }
+  .project-h-info {
+    margin-right: 30px;
+    flex: 1;
+    @include max($xxl) {
+      margin: 0 0 20px;
+      flex: 0 0 100%;
+      width: 100%;
+    }
+    .project-headline {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      margin-bottom: 7px;
+      h1 {
+        margin: 0 20px 0 0;
+      }
+      .project-type {
+        font-size: 18px;
+        font-weight: 300;
+        font-style: italic;
+        margin-bottom: 5px;
+      }
+    }
+    .project-cat {
+      color: $secondary;
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .project-short-desc {
+      max-width: 460px;
+      @include max($xxl) {
+        max-width: 100%;
+      }
+    }
+  }
+  .project-h-quote {
+    margin: 0 30px 20px auto;
+    @include max($xxl) {
+      margin: 0 20px 20px 0;
+    }
+    .btn-secondary {
+      font-size: 18px;
+      font-weight: bold;
+      min-width: 204px;
+      padding: 17px 30px;
+      @include max($lg) {
+        font-size: 14px;
+        padding: 0.625rem 1rem;
+        min-width: 0;
+      }
+    }
+  }
+  .project-h-authorinfo {
+    @include max($lg) {
+      margin-left: auto;
+    }
+    @include max($sm) {
+      width: 100%;
+      flex: 0 0 100%;
+    }
+    .project-author {
+      display: flex;
+      align-items: center;
+      margin-bottom: 22px;
+      .userpic {
+        margin-right: 12px;
+        width: 60px;
+        flex: 0 0 60px;
+        a {
+        }
+        img {
+        }
+      }
+      .username {
+        font-weight: 500;
+        font-size: 24px;
+        a {
+          color: #000;
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+    .project-upvote {
+      .btn {
+      }
+    }
+  }
+
+  .project-img {
+    position: relative;
+    line-height: 0;
+    margin-bottom: 35px;
+    img {
+      width: 100%;
+    }
+    .btn-featured {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      pointer-events: none;
+      @include max($sm) {
+        padding: 0.625rem 1rem;
+        font-size: 14px;
+        border-radius: 4px !important;
+      }
+    }
+  }
+
+  .project-equip {
+    margin-bottom: 60px;
+    .label {
+      font-weight: bold;
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+    .table {
+    }
+  }
+
+  .project-desc {
+    h2 {
+    }
+
+    .text {
+      p {
+        margin-bottom: 40px;
+      }
+
+      img {
+      }
+    }
+  }
+
+  .project-author-b {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    .userpic {
+      width: 60px;
+      flex: 0 0 60px;
+      margin-right: 12px;
+      a {
+      }
+      img {
+      }
+    }
+    .author-info {
+      .username {
+        font-weight: 500;
+        margin-bottom: 3px;
+        a {
+          color: #000;
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+      .author-desc {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.project-comments {
+  margin-bottom: 90px;
+  @include max($sm) {
+    margin-bottom: 50px;
+  }
+  .comments-h {
+    font-family: $font-basic;
+    font-size: 14px;
+    font-weight: normal;
+    border-bottom: 2px solid rgba(32, 44, 84, 0.17);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .comments-list {
+  }
+
+  .comments-form {
+    .form-group {
+      label {
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+    }
+    .btn {
+      min-width: 100px;
+    }
+  }
+}
+
+.section-similar {
+  margin-bottom: 140px;
+  @include max($sm) {
+    margin-bottom: 40px;
+  }
+  h2 {
+    margin-bottom: 35px;
+    @include max($sm) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.section-modal.section-modal-quote {
+  .vm--modal {
+    padding: 43px;
+    @include max($lg) {
+      padding: 20px;
+    }
+    @include max($sm) {
+      padding: 20px 16px;
+    }
+    .modal-close {
+      top: 52px;
+      right: 44px;
+      @include max($lg) {
+        top: 20px;
+        right: 20px;
+      }
+      @include max($sm) {
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+  h2 {
+    margin: 0 50px 32px 0;
+    @include max($lg) {
+      margin: 0 40px 20px 0;
+    }
+    @include max($sm) {
+      font-size: 30px;
+      margin: 0 30px 10px 0;
+    }
+  }
+  .form-group {
+    margin-bottom: 28px;
+    @include max($lg) {
+      margin-bottom: 20px;
+    }
+  }
+  textarea.form-control {
+    padding: 24px 32px;
+    @include max($lg) {
+      padding: 0.625rem 0.75rem;
+    }
+  }
+  .budget-row {
+    margin-bottom: 65px;
+    @include max($lg) {
+      margin-bottom: 30px;
+    }
+    @include max($sm) {
+      margin-bottom: 20px;
+    }
+  }
+  label {
+    font-size: 18px;
+    @include max($sm) {
+      font-size: 14px;
+    }
+  }
+  input.form-control {
+    width: 354px;
+    height: 50px;
+    font-size: 16px;
+    @include max($sm) {
+      width: 100%;
+    }
+  }
+  .btns {
+    .btn {
+      min-width: 143px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+/***** Community ******/
+
+.section-cposts {
+  padding-bottom: 77px;
+  @include max($lg) {
+    padding-bottom: 40px;
+  }
+  .cposts-h {
+    padding: 55px 0 30px;
+    text-align: center;
+    @include max($lg) {
+      padding: 40px 0 20px;
+    }
+    h1 {
+      margin: 0 0 20px;
+    }
+    .btn {
+      min-width: 162px;
+    }
+  }
+  .cpost-list {
+    margin: 48px 0 0;
+    @include max($lg) {
+      margin: 40px 0 0;
+    }
+  }
+}
+
+.section-search.section-search-cposts {
+  margin: 0 auto 0;
+  @include max($lg) {
+    margin: 0 20px 0;
+  }
+  @include max($sm) {
+    margin: 0 16px 0;
+  }
+  @include max($xxxs) {
+    margin: 0 10px 0;
+  }
+  .search-tags {
+    margin-bottom: 0;
+  }
+}

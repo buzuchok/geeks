@@ -1,0 +1,129 @@
+/***** Default and helpers *****/
+
+@import "mixins";
+@import "variables";
+
+html {
+  overflow: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+body {
+  overflow-x: hidden;
+  font-family: $font-basic;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+input[type="submit"],
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input,
+textarea,
+label {
+  font-family: $font-basic;
+}
+a,
+button,
+input,
+textarea,
+select {
+  outline: none;
+}
+
+input,
+textarea {
+  @include placeholder {
+    opacity: 1;
+    color: #b5b5b5;
+  }
+  &:focus {
+    @include placeholder {
+      opacity: 0.4;
+    }
+  }
+}
+
+textarea {
+  resize: vertical;
+  &[readonly] {
+    &:focus {
+      @include placeholder {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: all 0.2s;
+  &:hover {
+    color: $secondary;
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-family: $font-heading;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+h1,
+.h1 {
+  font-size: 42px;
+  @include max($sm) {
+    font-size: 36px;
+  }
+}
+h2,
+.h2 {
+  font-size: 2.125rem;
+  margin-bottom: 1.5rem;
+  @include max($sm) {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+}
+h3 {
+}
+h4 {
+}
+
+p {
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

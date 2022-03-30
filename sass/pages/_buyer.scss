@@ -1,0 +1,651 @@
+/***** Buyer ******/
+
+.section-buyer {
+  padding: 49px 0 77px;
+  @include max($lg) {
+    padding: 40px 0;
+  }
+}
+.buyer-row {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 -7px;
+  flex-wrap: wrap;
+  @include max($lg) {
+  }
+  .buyer-col-l {
+    width: 391px;
+    flex: 0 0 391px;
+    padding: 0 7px;
+    @include max($lg) {
+      width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 40px;
+    }
+  }
+  .buyer-col-r {
+    flex: 1;
+    padding: 0 7px;
+  }
+}
+.section-buyer-info {
+  border: 1px solid $greyd;
+  border-radius: 6px;
+  padding: 22px;
+  margin-bottom: 20px;
+  @include max($lg) {
+    padding: 20px;
+  }
+  @include max($sm) {
+    padding: 20px 15px;
+  }
+
+  .btn-status {
+    padding: 0.344rem 0.625rem;
+    margin-bottom: 28px;
+    pointer-events: none;
+    &.btn-status-active {
+      background: #2ad94f;
+      color: #fff;
+    }
+  }
+  .userpic {
+    margin: 0 0 15px;
+    text-align: center;
+  }
+  .username {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .subtitle {
+    text-align: center;
+  }
+  .buyer-info {
+    margin-top: 45px;
+    .buyer-info-h {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      .label {
+        font-weight: bold;
+        font-size: 18px;
+        margin-right: 20px;
+      }
+      .buyer-rating {
+      }
+    }
+    .text {
+      color: $grey7;
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    .more {
+      margin-bottom: 10px;
+      a {
+        color: $secondary;
+        font-weight: 500;
+        font-size: 14px;
+        &:hover {
+          color: $secondaryhover;
+        }
+      }
+    }
+  }
+}
+
+.section-buyer-conversation {
+  border: 1px solid $greyd;
+  background: #f9f9f9;
+  border-radius: 6px;
+  .buyer-conversation-h {
+    padding: 15px 22px;
+    border-bottom: 1px solid $greyd;
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 500;
+      font-family: $font-basic;
+    }
+  }
+}
+
+.conversation-list {
+  .citem {
+    padding: 19px 15px 19px 22px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition: all 0.2s;
+    @include max($xs) {
+      padding: 15px 10px;
+    }
+    @include max($xxs) {
+      padding: 10px;
+    }
+    &:hover {
+      background: rgba(#000, 0.02);
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid $greyd;
+    }
+    &.active {
+      background: rgba(#000, 0.04);
+    }
+
+    .userpic {
+      width: 56px;
+      flex: 0 0 56px;
+      position: relative;
+      line-height: 0;
+      margin-right: 17px;
+      @include max($xs) {
+        margin-right: 10px;
+      }
+      img {
+      }
+      .status {
+        position: absolute;
+        bottom: 4px;
+        right: 3px;
+      }
+    }
+    .citem-c {
+      width: 200px;
+      flex: 0 0 200px;
+      margin-right: 7px;
+      @include max($xxs) {
+        margin-right: 0;
+      }
+      .username {
+        font-weight: 500;
+        margin-bottom: 3px;
+      }
+      .text-w {
+        display: flex;
+        flex-wrap: wrap;
+        .text {
+          color: $grey7;
+          font-size: 14px;
+          margin-right: 9px;
+          flex: 1;
+          max-width: 200px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: "";
+        }
+        .comments {
+          display: flex;
+          align-items: center;
+          width: 51px;
+          flex: 0 0 51px;
+          .num {
+            background: $green;
+            border-radius: 9px;
+            min-width: 28px;
+            padding: 0 3px;
+            text-align: center;
+            line-height: 18px;
+            font-size: 12px;
+            text-align: center;
+            margin-right: 6px;
+          }
+          .icon-w {
+          }
+        }
+        &.is-comment {
+          .text {
+            max-width: 140px;
+          }
+        }
+      }
+    }
+    .citem-r {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-top: 3px;
+      @include max($xxs) {
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 0 0 0 66px;
+        justify-content: flex-start;
+      }
+      .ago {
+        font-size: 12px;
+        white-space: nowrap;
+      }
+      .icon-clock {
+        margin-right: 6px;
+      }
+      .icon-star {
+        margin-left: 7px;
+        color: $secondary;
+      }
+    }
+  }
+}
+
+.section-buyer-orders {
+}
+
+.order-card-list {
+  .ocard {
+    border: 1px solid $greyd;
+    border-radius: 6px;
+    background: #f9f9f9;
+    padding: 14px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    .ocard-content {
+      display: flex;
+      align-items: center;
+      margin-bottom: 35px;
+      @include max($md) {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+      .ocard-img {
+        width: 152px;
+        flex: 0 0 152px;
+        margin-right: 30px;
+        @include max($xxl) {
+          margin-right: 20px;
+        }
+        @include max($xs) {
+          width: 100%;
+          flex: 0 0 100%;
+          margin: 0 0 20px;
+        }
+        img {
+          width: 100%;
+          @include max($xxs) {
+            height: 200px;
+            object-fit: cover;
+          }
+        }
+      }
+      .ocard-userpic {
+        position: relative;
+        margin-right: 30px;
+        flex: 0 0 66px;
+        @include max($xxl) {
+          margin-right: 20px;
+        }
+        img {
+        }
+        .status {
+          position: absolute;
+          right: 0;
+          bottom: 7px;
+          width: 14px;
+          height: 14px;
+        }
+      }
+      .ocard-info {
+        flex: 1;
+        &:not(:last-child) {
+          padding-right: 30px;
+          @include max($xxl) {
+            padding-right: 10px;
+          }
+        }
+        .ocard-info-t {
+          font-weight: 500;
+        }
+        .ocard-info-b {
+          font-size: 12px;
+          display: flex;
+          flex-wrap: wrap;
+          .icon-clock {
+            margin-right: 6px;
+          }
+        }
+        &.ocard-info-1 {
+          @include max($md) {
+            flex: 0 0 152px;
+            margin: 20px 20px 20px 0;
+          }
+        }
+        &.ocard-info-2 {
+          @include max($md) {
+            flex: 0 0 100%;
+            margin: 20px 0 0;
+          }
+        }
+        &.ocard-info-3 {
+          @include max($md) {
+            flex: 0 0 100%;
+            margin: 20px 0 0;
+          }
+        }
+      }
+    }
+
+    .ocard-b {
+      display: flex;
+      align-items: center;
+      padding: 0 27px 16px 0;
+      @include max($xxl) {
+        padding: 0;
+      }
+      @include max($xs) {
+        display: block;
+      }
+      .ocard-b-l {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-right: 20px;
+        @include max($xs) {
+          display: block;
+          margin: 0 0 15px;
+          text-align: center;
+        }
+        a {
+          font-size: 12px;
+          color: #000;
+          margin-right: 13px;
+          &:hover {
+            color: $secondary;
+          }
+        }
+        p {
+        }
+      }
+      .ocard-b-r {
+        margin-left: auto;
+        width: 104px;
+        flex: 0 0 104px;
+        @include max($xs) {
+          margin: 0;
+          width: 100%;
+          text-align: center;
+        }
+        .btn {
+          font-weight: 500;
+        }
+      }
+    }
+    &.ocard-sm {
+      border: none;
+      @include max($xxl) {
+        font-size: 14px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      .ocard-content {
+        margin-bottom: 0;
+      }
+      .ocard-img {
+        width: 109px;
+        flex: 0 0 109px;
+        margin-right: 11px;
+
+        @include max($xs) {
+          width: 100%;
+          flex: 0 0 100%;
+          margin: 0 0 20px;
+        }
+      }
+      .ocard-userpic {
+        flex: 0 0 46px;
+        margin-right: 13px;
+        .status {
+          position: absolute;
+          right: -2px;
+          bottom: 5px;
+          width: 11px;
+          height: 11px;
+        }
+      }
+      .ocard-username {
+        font-weight: 500;
+        margin-right: 20px;
+        min-width: 120px;
+        @include max($xxl) {
+          min-width: 0;
+        }
+      }
+      .ocard-info {
+        flex: 1;
+        &:not(:last-child) {
+          padding-right: 20px;
+          @include max($xxl) {
+            padding-right: 10px;
+          }
+        }
+        .ocard-info-t {
+          font-weight: normal;
+        }
+        .ocard-info-b {
+        }
+        .badge {
+          font-size: 8px;
+          border-radius: 7px;
+          padding: 2px 5px;
+          font-weight: normal;
+        }
+        &.ocard-info-sm-1 {
+          @include max($md) {
+            flex: 0 0 100%;
+            margin: 20px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+          }
+        }
+        &.ocard-info-sm-2 {
+          @include max($md) {
+            flex: 0 0 100%;
+            margin: 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+          }
+        }
+        &.ocard-info-sm-3 {
+          @include max($md) {
+            flex: 0 0 100%;
+            margin: 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+          }
+        }
+        &.ocard-info-sm-4 {
+          flex: 0 0 50px;
+          padding-right: 20px;
+          text-align: right;
+          @include max($xxl) {
+            padding: 0;
+          }
+          @include max($md) {
+            flex: 0 0 100%;
+            margin: 10px 0 0;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*** Conversation ***/
+.section-conversation {
+  padding: 45px 0 77px;
+  @include max($sm) {
+    padding: 16px 0;
+  }
+
+  .conversation-row {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 -11px;
+    @include max($lg) {
+      margin: 0;
+    }
+
+    position: relative;
+    overflow: hidden;
+    @include max($lg) {
+      display: block;
+    }
+    .conversation-col-l {
+      width: 400px;
+      flex: 0 0 400px;
+      padding: 0 11px;
+      transition: all 0.2s;
+      @include max($lg) {
+        width: 100%;
+        padding: 0;
+      }
+
+      &.m-collapsed {
+        .conversation-list {
+          .citem {
+            @include max($lg) {
+              max-height: 0;
+              overflow: hidden;
+              padding-top: 0;
+              padding-bottom: 0;
+              border: none;
+            }
+            &.active {
+              @include max($lg) {
+                max-height: 95px;
+                padding-top: 19px;
+                padding-bottom: 19px;
+              }
+              @include max($xxs) {
+                padding-top: 10px;
+                padding-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .conversation-col-r {
+      flex: 1;
+      padding: 0 11px;
+      transition: all 0.2s;
+      @include max($lg) {
+        overflow: hidden;
+        width: 100%;
+        margin-top: 10px;
+        padding: 0;
+      }
+      &.m-collapsed {
+        @include max($lg) {
+          max-height: 0;
+        }
+      }
+    }
+  }
+}
+
+.section-conversation-list {
+  border: 1px solid $greyd;
+  background: #f9f9f9;
+  border-radius: 6px;
+  .conversation-list-h {
+    display: flex;
+    align-items: center;
+    padding: 15px 22px;
+    border-bottom: 1px solid $greyd;
+    h2 {
+      margin: 0;
+      line-height: 30px;
+      font-size: 24px;
+      font-weight: 500;
+      font-family: $font-basic;
+      margin-right: 10px;
+    }
+    .icon-w {
+      margin-top: 4px;
+    }
+    &.back {
+      cursor: pointer;
+      .icon-w {
+        margin-right: 10px;
+        transform: rotate(90deg);
+      }
+    }
+    .all {
+      margin-left: auto;
+      a {
+        color: $grey7;
+        font-size: 14px;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  .conversation-list-container {
+    height: 569px;
+    margin-right: -18px;
+    @include max($xxl) {
+      margin-right: 0;
+    }
+    @include max($lg) {
+      height: auto;
+    }
+    // .__vuescroll {
+    //   &.mouseEnter {
+    //     .__bar-is-vertical {
+    //       opacity: 1 !important;
+    //     }
+    //   }
+    // }
+    .conversation-list {
+      padding-right: 18px;
+      @include max($xxl) {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.section-conversation-chat {
+  border: 1px solid $greyd;
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  align-items: stretch;
+  height: 632px;
+  .conversation-chat-empty {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $primary;
+    .icon-w {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .empty-message {
+      font-family: $font-heading;
+      font-weight: bold;
+      font-size: 34px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .empty-info {
+      font-size: 14px;
+      max-width: 320px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.7;
+    }
+  }
+}

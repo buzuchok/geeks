@@ -1,0 +1,32 @@
+// Fonts
+
+//@import "~font-awesome/scss/font-awesome";
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+.form-control:disabled, .form-control[readonly] {
+    background: #eaeaea !important;
+}
+
+.validation_error {
+    color:red !important;
+}
+
+.project_image_preview {
+    max-width: 140px !important;
+    height: auto;
+    border: 1px dotted gray !important;
+    padding: 2px;
+    margin: 5px;
+}
+
+.small {
+    font-size: smaller;
+}

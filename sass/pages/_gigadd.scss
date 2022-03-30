@@ -1,0 +1,531 @@
+/***** Gig Add ******/
+
+.section-gigadd {
+  padding: 0 0 100px;
+  background: #f8f9fa url("../images/form-bg-line.svg") 50% 230px no-repeat;
+  background-size: 100% auto;
+  @include max($lg) {
+    padding: 0 0 50px;
+  }
+  .container {
+    max-width: 1304px;
+  }
+  .gigadd-steps {
+    padding: 61px 0 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include max($lg) {
+      padding: 20px 0;
+    }
+    @include max($md) {
+      align-items: flex-start;
+    }
+    .gigadd-step {
+      display: flex;
+      align-items: center;
+      @include max($lg) {
+        padding: 0 10px;
+      }
+      @include max($md) {
+        display: block;
+        text-align: center;
+        min-width: 15%;
+      }
+      @include max($sm) {
+        padding: 0 5px;
+      }
+      &:not(:last-child) {
+        margin-right: 50px;
+        @include max($lg) {
+          margin: 0;
+        }
+      }
+      .icon-w {
+        flex: 0 0 25px;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        color: #d3ffdd;
+        margin-right: 8px;
+        @include max($md) {
+          margin: 0 auto 5px;
+        }
+      }
+      .step-title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.2;
+        display: block;
+        @include max($lg) {
+          font-size: 14px;
+        }
+        @include max($sm) {
+          font-size: 12px;
+        }
+        @include max($xs) {
+          font-size: 11px;
+          font-weight: normal;
+        }
+        @include max($xxs) {
+          font-size: 10px;
+        }
+        @include max($xxxs) {
+          font-size: 9px;
+        }
+      }
+      &.is-active {
+        .icon-w {
+          color: $green;
+        }
+      }
+    }
+    .sep {
+      color: $primary;
+      margin: 0 73px;
+      @include max($lg) {
+        margin: 0 30px;
+      }
+      @include max($sm) {
+        margin: 0 20px;
+      }
+      @include max($xs) {
+        margin: 4px 10px;
+      }
+      @include max($xxs) {
+        margin: 4px;
+      }
+      .icon-angle-right {
+        @include max($sm) {
+          width: 7px;
+        }
+      }
+    }
+  }
+
+  .form-group {
+    label {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.section-gigadd-step-1 {
+  padding: 70px 50px 100px 80px;
+
+  @include max($xxxl) {
+    padding: 30px;
+  }
+  @include max($lg) {
+    padding: 20px;
+  }
+  @include max($sm) {
+    padding: 20px 15px;
+  }
+  .gigadd-step-1-container {
+    flex: 1;
+  }
+  .gigadd-step-1-block {
+    padding: 42px 66px 118px;
+    margin-bottom: 40px;
+    @include max($xxl) {
+      border: none !important;
+      padding: 0;
+    }
+  }
+}
+
+.gigadd-step-row {
+  display: flex;
+  margin-bottom: 20px;
+  @include max($lg) {
+    display: block;
+  }
+}
+.gigadd-btns {
+  margin-right: 310px;
+  @include max($lg) {
+    margin: 0;
+  }
+}
+
+.gigadd-step-sidebar {
+  width: 279px;
+  flex: 0 0 279px;
+  margin-left: 31px;
+  @include max($lg) {
+    margin: 20px 0 0;
+    width: 100%;
+  }
+  .gigadd-step-sidebar-block {
+    padding: 16px 16px 8px;
+  }
+}
+
+.gigadd-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $greyd;
+  padding-bottom: 23px;
+  margin-bottom: 30px;
+  @include max($lg) {
+    display: block;
+    margin-bottom: 20px;
+  }
+  h2 {
+    margin: 0 20px 0 0;
+    font-size: 24px;
+    font-family: $font-basic;
+    font-weight: bold;
+    @include max($lg) {
+      margin: 0;
+    }
+  }
+  .gigadd-header-r {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    .label {
+      margin-right: 13px;
+      font-family: $font-heading;
+      font-weight: 500;
+    }
+    .custom-switch {
+      padding: 0;
+    }
+  }
+  .btn.btn-icon.btn-link {
+    margin-left: auto;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 0;
+    @include max($lg) {
+      margin: 10px 0 0;
+    }
+    .icon-w {
+      .icon-plus-2 {
+        color: $secondary;
+      }
+    }
+  }
+}
+.gigadd-body {
+  font-size: 14px;
+  h2 {
+    margin: 0 20px 0 0;
+    font-size: 24px;
+    font-family: $font-basic;
+    font-weight: bold;
+  }
+  h3 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-family: $font-basic;
+    font-weight: bold;
+  }
+}
+.gigadd-media-add-container {
+  margin-bottom: 32px;
+}
+.gigadd-media-add {
+  position: relative;
+  padding: 20px;
+  max-width: 180px;
+  min-height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23D2D5DD' stroke-width='2' stroke-dasharray='1%2c 4' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  }
+  .add-message {
+    transition: all 0.2s;
+    .icon-w {
+      margin: 0 auto 12px;
+    }
+    .add-text {
+      font-size: 12px;
+      text-align: center;
+      .file-uploads {
+        color: #5653fc;
+        transition: all 0.2s;
+        &:hover {
+          color: $secondary;
+        }
+        label {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &.active {
+    .add-message {
+      opacity: 0.3;
+    }
+  }
+}
+
+.section-gigadd-step-2 {
+  padding: 70px 50px 100px 80px;
+
+  @include max($xxxl) {
+    padding: 30px;
+  }
+  @include max($lg) {
+    padding: 20px;
+  }
+  @include max($sm) {
+    padding: 20px 15px;
+  }
+  .gigadd-step-2-container {
+    flex: 1;
+  }
+  .gigadd-step-2-block {
+    &.gigadd-step-2-block-1 {
+      margin-bottom: 80px;
+      @include max($lg) {
+        margin-bottom: 40px;
+      }
+    }
+    &.gigadd-step-2-block-2 {
+      margin-bottom: 60px;
+      @include max($lg) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .faq-list {
+    .faq-item {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $greyd;
+      }
+    }
+    .faq-q {
+      color: $primary;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .faq-a {
+    }
+  }
+  .gigadd-step-sidebar {
+    margin-top: 52px;
+  }
+}
+
+.section-gigadd-step-3 {
+  padding: 70px 50px 100px 80px;
+  @include max($xxxl) {
+    padding: 30px;
+  }
+  @include max($lg) {
+    padding: 20px;
+  }
+  @include max($sm) {
+    padding: 20px 15px;
+  }
+  .gigadd-body {
+    margin: 80px 0 50px;
+    @include max($lg) {
+      margin: 40px 0 20px;
+    }
+  }
+  .form-group {
+    label {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      @include max($lg) {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.section-gigadd-step-4 {
+  padding: 70px 50px 100px 80px;
+  @include max($xxxl) {
+    padding: 30px;
+  }
+  @include max($lg) {
+    padding: 20px;
+  }
+  @include max($sm) {
+    padding: 20px 15px;
+  }
+  .gigadd-step-4-container {
+    flex: 1;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: $font-basic;
+    margin-bottom: 20px;
+  }
+  .note {
+    border: 1px solid #d2d5dd;
+    background: rgba($primary, 0.08);
+    padding: 18px 30px;
+  }
+  .gigadd-body-block {
+    padding: 42px 0 48px;
+    @include max($lg) {
+      padding: 30px 0;
+    }
+    &.gigadd-body-block-2 {
+      border-top: 1px solid $greyd;
+      max-width: 572px;
+    }
+  }
+  .custom-checkbox.custom-checkbox.custom-checkbox-sm
+    input[type="checkbox"]
+    + span {
+    font-size: 14px;
+    a {
+      font-weight: 500;
+      color: #000;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  .gigadd-step-sidebar {
+  }
+}
+
+.section-gigadd-step-5 {
+  padding: 70px 50px 100px 80px;
+  @include max($xxxl) {
+    padding: 30px;
+  }
+  @include max($lg) {
+    padding: 20px;
+  }
+  @include max($sm) {
+    padding: 20px 15px;
+  }
+  .gigadd-step-4-container {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+  .gigadd-step-5-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 230px;
+    padding: 20px;
+    border: 1px solid $secondary;
+    background: #fff5e2;
+    border-radius: 3px;
+    margin-bottom: 37px;
+    text-align: center;
+    font-size: 14px;
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  .gigadd-step-5-block-inner {
+  }
+}
+
+.section-gigadd-step-6 {
+  padding: 70px 50px 100px 80px;
+
+  @include max($xxxl) {
+    padding: 30px;
+  }
+  @include max($lg) {
+    padding: 20px;
+  }
+  @include max($sm) {
+    padding: 20px 15px;
+  }
+  .gigadd-step-6-container {
+    flex: 1;
+  }
+  .gigadd-step-6-block {
+  }
+
+  .gigadd-step-sidebar {
+    margin-top: 52px;
+  }
+
+  .table-tform {
+    th.pricing-title {
+      font-size: 18px;
+      text-align: center;
+    }
+    .custom-checkbox-group {
+      margin: 0;
+    }
+  }
+  .gigadd-body-1 {
+    margin-bottom: 50px;
+  }
+
+  .gigadd-body-2 {
+    .curr {
+    }
+  }
+
+  .table {
+    &.table-tform.table-packages {
+      td {
+        padding: 0;
+        position: relative;
+
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+    &.table-extraservices {
+      td {
+        padding: 12px 20px;
+        border-bottom-width: 1px;
+      }
+      .custom-checkbox-group {
+        margin-bottom: 0;
+      }
+      .form-group label {
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+
+      .addextra-row {
+        display: flex;
+        align-items: flex-start;
+        .addextra-checkbox {
+          width: 30px;
+          flex: 0 0 30px;
+          padding-top: 10px;
+        }
+        .addextra-form {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

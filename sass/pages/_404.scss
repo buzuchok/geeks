@@ -1,0 +1,48 @@
+/***** 404 ******/
+
+.section-404 {
+  background: #f8f9fa url("../images/form-bg-line.svg") 50% 50% no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  text-align: center;
+  @include max($lg) {
+    padding: 40px 0;
+  }
+  .container {
+    max-width: 1038px;
+  }
+  h1 {
+    margin-bottom: 60px;
+    font-size: 109px;
+    color: $primary;
+    @include max($lg) {
+      margin-bottom: 30px;
+    }
+    @include max($sm) {
+      font-size: 72px;
+    }
+  }
+  .s404-message {
+    padding: 62px 30px 280px;
+    @include max($lg) {
+      padding: 40px 20px;
+    }
+    h2 {
+      font-size: 42px;
+      margin-bottom: 38px;
+      color: $primary;
+      @include max($sm) {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+    }
+    p {
+      font-size: 21px;
+      max-width: 600px;
+      margin: 0 auto;
+      @include max($sm) {
+        font-size: 16px;
+      }
+    }
+  }
+}

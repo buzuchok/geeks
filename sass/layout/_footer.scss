@@ -1,0 +1,145 @@
+/***** Footer *****/
+
+.footer {
+  margin-top: auto;
+  background: $primary;
+  padding: 49px 0 0;
+  font-size: 18px;
+  color: #fff;
+  @include max($xl) {
+    padding: 30px 0 0;
+  }
+  @include max($lg) {
+    font-size: 16px;
+  }
+  @include max($sm) {
+    font-size: 14px;
+  }
+  .footer-t {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 42px;
+    @include max($lg) {
+      margin-bottom: 0;
+    }
+  }
+  .footer-t-info {
+    width: 493px;
+    flex: 0 0 493px;
+    @include max($lg) {
+      width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+    }
+    .logo {
+      margin-bottom: 22px;
+      img {
+        width: 279px;
+        @include max($sm) {
+          width: 148px;
+        }
+      }
+    }
+    .text {
+      max-width: 80%;
+      line-height: 1.7;
+      @include max($lg) {
+        line-height: 1.5;
+      }
+      @include max($sm) {
+        max-width: 100%;
+      }
+    }
+  }
+  .footer-t-menu {
+    width: 388px;
+    flex: 0 0 388px;
+    margin-top: 32px;
+    @include max($lg) {
+      margin: 0 0 20px;
+    }
+    @include max($xs) {
+      width: 100%;
+      flex: 0 0 100%;
+    }
+    .nav {
+    }
+    .nav-item {
+    }
+    .nav-link {
+      color: #fff;
+      padding: 11px 0 12px;
+      @include max($sm) {
+        padding: 5px 0;
+      }
+      strong {
+        font-family: $font-heading;
+      }
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+  .footer-t-subscribe {
+    width: 279px;
+    flex: 0 0 279px;
+    margin-top: 190px;
+    @include max($xl) {
+      margin-top: 0;
+    }
+    @include max($lg) {
+      margin-bottom: 20px;
+    }
+    .form-group {
+      label {
+        font-family: $font-heading;
+        font-weight: bold;
+      }
+      .form-control {
+        border: 1px solid #fff;
+        background: rgba(#fff, 0.21);
+        color: #fff;
+      }
+    }
+  }
+
+  .footer-b {
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 0;
+    border-top: 2px solid rgba(#fff, 0.17);
+    @include max($xs) {
+      padding: 16px 0;
+      display: block;
+    }
+    .copy {
+      @include max($xs) {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+    .social {
+      display: flex;
+      align-items: center;
+      @include max($xs) {
+        justify-content: center;
+      }
+      a {
+        color: $secondary;
+        &:not(:last-child) {
+          margin-right: 28px;
+          @include max($sm) {
+            margin-right: 16px;
+          }
+        }
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+      .icon-twitter path {
+        fill: $secondary;
+      }
+    }
+  }
+}

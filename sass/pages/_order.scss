@@ -1,0 +1,464 @@
+/***** Order ******/
+
+.section-order {
+  background: #f8f9fa url("../images/checkout-bg-line.svg") 50% 90px no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 114px;
+  @include max($lg) {
+    padding-bottom: 50px;
+  }
+
+  .order-topbar {
+    padding: 19px 0 15px;
+    background: #ffeecc;
+    margin-bottom: 20px;
+    .order-topbar-container {
+      max-width: 808px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 20px;
+      @include max($sm) {
+        padding: 0 16px;
+      }
+      @include max($xxxs) {
+        padding: 0 10px;
+      }
+    }
+    .order-topbar-item {
+      display: flex;
+      align-items: center;
+      margin-right: 60px;
+      flex-wrap: wrap;
+      @include max($md) {
+        width: 50%;
+        flex: 0 0 50%;
+        margin: 0;
+        padding-right: 20px;
+      }
+      @include max($xxs) {
+        width: 100%;
+        flex: 0 0 100%;
+        padding: 0 0 10px;
+      }
+      .icon-w {
+        .icon-checkbox2 {
+          color: $dgreen;
+          margin-right: 14px;
+        }
+        .icon-delivery {
+          color: $secondary;
+          margin-right: 14px;
+        }
+      }
+      span {
+        font-size: 14px;
+        br {
+          @include max($xxs) {
+            display: none;
+          }
+        }
+      }
+    }
+    .btn {
+      @include max($lg) {
+        margin: 10px auto 0;
+      }
+    }
+  }
+
+  .order-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 -7px;
+    @include max($lg) {
+      flex-direction: column;
+    }
+  }
+  .order-content {
+    padding: 0 7px;
+    flex: 1;
+    margin-left: 196px;
+    @include max($xxxl) {
+      margin-left: 0;
+    }
+    @include max($lg) {
+      order: 2;
+      width: 100%;
+      flex: 0 0 100%;
+    }
+    .order-message {
+      padding: 27px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      @include max($lg) {
+        margin-bottom: 10px;
+        padding: 20px;
+      }
+      @include max($sm) {
+        padding: 20px 15px;
+      }
+      .icon-w {
+        margin-right: 15px;
+      }
+      span {
+        a {
+          color: $secondary;
+          &:hover {
+            color: $secondaryhover;
+          }
+        }
+      }
+    }
+
+    .section-order-info {
+      padding: 27px 27px 20px;
+      margin-bottom: 30px;
+      color: rgba(#000, 0.8);
+      @include max($lg) {
+        margin-bottom: 10px;
+        padding: 20px;
+      }
+      @include max($sm) {
+        padding: 20px 15px;
+      }
+      .order-info-header {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: flex-start;
+        @include max($sm) {
+          display: block;
+        }
+        .order-info-hl {
+          flex: 1;
+          margin-right: 20px;
+          @include max($sm) {
+            margin: 0 0 10px;
+          }
+        }
+        .order-info-hlt {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          @include max($xs) {
+            display: block;
+          }
+          .order-num {
+            font-size: 24px;
+            color: #000;
+            font-weight: 500;
+            margin-right: 40px;
+            @include max($xs) {
+              margin: 0 0 10px;
+            }
+          }
+          a {
+            &:hover {
+              color: $secondary;
+            }
+          }
+        }
+        .order-info-hb {
+          a {
+          }
+        }
+        .order-info-hr {
+          text-align: right;
+          @include max($sm) {
+            text-align: left;
+          }
+          .order-price {
+            font-weight: bold;
+            font-size: 24px;
+            color: #000;
+          }
+          .order-type {
+            background: #ffeecc;
+            border: 1px solid $secondary;
+            border-radius: 4px;
+            padding: 0 5px;
+            font-size: 12px;
+            display: inline-block;
+          }
+        }
+      }
+      .order-info-body {
+        p {
+        }
+      }
+
+      .table-order-list {
+        margin-bottom: 0;
+        @include max($sm) {
+          font-size: 14px;
+        }
+        .order-list-head {
+          position: relative;
+          @include max($sm) {
+            display: none;
+          }
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #dde0e6;
+            border-radius: 6px;
+          }
+          tr {
+          }
+          th {
+            padding: 10px 12px 11px;
+            border: none;
+            @include max($sm) {
+              padding: 5px;
+            }
+            &.col-quantity,
+            &.col-duration,
+            &.col-amount {
+              text-align: center;
+            }
+          }
+        }
+        .order-list-body {
+          tr {
+            position: relative;
+          }
+          td {
+            border: none;
+            @include max($sm) {
+              padding: 5px;
+            }
+            p {
+            }
+            ul.list-green {
+              margin: 0;
+            }
+            &.col-item {
+              padding-left: 0;
+            }
+            &.col-quantity,
+            &.col-duration,
+            &.col-amount {
+              text-align: center;
+              @include max($sm) {
+                position: absolute;
+                right: 0;
+                padding: 0 5px 0 0;
+              }
+            }
+            &.col-quantity {
+              @include max($sm) {
+                top: 0;
+              }
+            }
+            &.col-duration {
+              @include max($sm) {
+                top: 25px;
+              }
+            }
+            &.col-amount {
+              @include max($sm) {
+                top: 50px;
+                font-weight: bold;
+                font-size: 16px;
+              }
+            }
+          }
+          tr.order-item-top {
+            td {
+              padding-top: 30px;
+              @include max($sm) {
+                padding-top: 20px;
+              }
+            }
+          }
+        }
+        .order-list-foot {
+          @include max($sm) {
+            font-size: 16px;
+          }
+          tr {
+            th {
+              @include max($lg) {
+                padding: 5px;
+              }
+              &.label {
+                text-align: right;
+                padding-right: 0;
+              }
+              &.val {
+                font-weight: normal;
+                text-align: center;
+                @include max($sm) {
+                  text-align: right;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .section-order-countdown {
+      margin-bottom: 30px;
+      padding: 0 40px;
+      @include max($lg) {
+        padding: 0;
+      }
+      .order-countdown {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .countdown-item {
+          @include max($md) {
+            width: 22%;
+            flex: 0 0 22%;
+          }
+        }
+        .countdown-val {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 12px;
+        }
+        .countdown-val-cell {
+          width: 54px;
+          height: 63px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 5px;
+          padding: 5px;
+          font-size: 34px;
+          font-weight: 500;
+          @include max($sm) {
+            width: 48%;
+            height: 50px;
+            font-size: 24px;
+            margin: 0;
+          }
+        }
+        .countdown-label {
+          text-align: center;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+        .countdown-colon {
+          font-weight: 500;
+          font-size: 34px;
+          margin: 0 5px;
+          line-height: 60px;
+          @include max($md) {
+            width: 3%;
+            flex: 0 0 3%;
+            margin: 0;
+            text-align: center;
+            font-size: 24px;
+            line-height: 50px;
+          }
+        }
+      }
+    }
+
+    .section-order-conversation {
+      .order-conversation {
+        padding: 35px 27px 48px;
+        margin-bottom: 21px;
+        .order-conversation-intro {
+          text-align: center;
+          .icon-chat {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+          }
+          .intro-message {
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+          }
+          .intro-view {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            @include max($md) {
+              display: block;
+            }
+            .icon-w {
+              margin-left: 7px;
+              font-size: 14px;
+            }
+            .btn-link {
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      .order-conversation-form {
+        margin-top: 50px;
+        .label {
+          font-weight: 500;
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        .form-group {
+        }
+        textarea.form-control {
+          padding: 20px 24px;
+        }
+        .btns {
+        }
+      }
+    }
+  }
+
+  .order-sidebar {
+    padding: 0 7px;
+    width: 293px;
+    flex: 0 0 293px;
+    @include max($lg) {
+      width: 100%;
+      flex: 0 0 100%;
+      order: 1;
+      margin-bottom: 20px;
+    }
+    .bblock {
+      color: rgba(#fff, 0.8);
+      padding: 20px;
+      @include max($lg) {
+        padding: 15px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 30px;
+        @include max($lg) {
+          margin-bottom: 10px;
+        }
+      }
+      b {
+        color: #fff;
+      }
+      a {
+        color: $secondary;
+        &:hover {
+          color: $secondaryhover;
+        }
+      }
+      .btn.btn-link {
+        color: rgba(#fff, 0.8);
+        font-size: 16px;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+    .order-note {
+    }
+  }
+}

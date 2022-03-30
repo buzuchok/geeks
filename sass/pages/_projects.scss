@@ -1,0 +1,92 @@
+/***** Projects ******/
+
+.section-createproject-hero {
+  height: 477px;
+  padding: 64px 0 27px;
+  position: relative;
+  z-index: 1;
+  @include max($lg) {
+    padding-top: 100px;
+    height: 400px;
+  }
+  .createproject-hero-bg {
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    bottom: -100px;
+    left: 45%;
+    transform: translateX(-50%);
+    right: 0;
+    background: url("../images/create-project-line.svg") 50% 50% no-repeat;
+    background-size: contain;
+    height: 470px;
+    width: 2000px;
+    @include max($huge) {
+      left: 40%;
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 5px;
+      left: 0;
+      width: 100%;
+      height: 530px;
+      background: url("../images/create-project-bg.png") 73% 100% no-repeat;
+      @include max($lg) {
+        background-size: 110% auto;
+        top: 0;
+      }
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 15px;
+    @include max($lg) {
+      margin-bottom: 10px;
+    }
+  }
+  p {
+    margin-bottom: 32px;
+    font-size: 18px;
+    @include max($lg) {
+      margin-bottom: 16px;
+    }
+  }
+  .btns {
+    .btn {
+      padding: 0.625rem 1.3rem;
+    }
+  }
+}
+
+.section-search.section-search-projects {
+  margin: 0 auto -40px;
+  @include max($lg) {
+    margin: 0 20px 0;
+  }
+  @include max($sm) {
+    margin: 0 16px 0;
+  }
+  @include max($xxxs) {
+    margin: 0 10px 0;
+  }
+}
+
+.section-projects.section-projects-list {
+  background: #f8f9fa;
+  padding: 77px 0;
+  position: relative;
+  z-index: 0;
+  @include max($lg) {
+    padding: 40px 0;
+  }
+  h2 {
+    margin-bottom: 22px;
+  }
+}

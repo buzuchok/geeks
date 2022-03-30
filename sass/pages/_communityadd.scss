@@ -1,0 +1,38 @@
+/***** Community Add ******/
+
+.section-cpostadd {
+  background: #f8f9fa url("../images/form-bg-line.svg") 50% 250px no-repeat;
+  background-size: 100% auto;
+  padding: 40px 0 100px;
+  @include max($lg) {
+    padding: 40px 0;
+  }
+  .container {
+    max-width: 1304px;
+  }
+  h1 {
+    margin-bottom: 32px;
+    @include max($lg) {
+      margin-bottom: 20px;
+    }
+  }
+  .cpostadd-container {
+    padding: 36px 43px;
+    @include max($xxxl) {
+      padding: 30px;
+    }
+    @include max($lg) {
+      padding: 20px;
+    }
+    @include max($sm) {
+      padding: 20px 15px;
+    }
+  }
+
+  .btns {
+    margin-top: 40px;
+    @include max($lg) {
+      margin-top: 20px;
+    }
+  }
+}

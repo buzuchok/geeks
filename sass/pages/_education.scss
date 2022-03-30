@@ -1,0 +1,159 @@
+/***** Education ******/
+
+.section-education-hero {
+  height: 477px;
+  padding: 141px 0 100px;
+  position: relative;
+  z-index: 1;
+  @include max($huge) {
+  }
+  @include max($lg) {
+    padding: 100px 0 0;
+    height: 400px;
+  }
+  .education-hero-bg {
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    bottom: -60px;
+    left: 45%;
+    transform: translateX(-50%);
+    right: 0;
+    background: url("../images/create-project-line.svg") 50% 50% no-repeat;
+    background-size: contain;
+    height: 470px;
+    width: 2000px;
+    @include max($huge) {
+      left: 40%;
+    }
+    @include max($lg) {
+      width: 124%;
+      top: 0;
+    }
+    @include max($sm) {
+      width: 150%;
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      bottom: -115px;
+      left: 59%;
+      transform: translateX(-50%);
+      width: 1153px;
+      height: 596px;
+      background: url("../images/hero-bg.png") 50% 100% no-repeat;
+      @include max($lg) {
+        width: 90%;
+        height: 400px;
+        bottom: 0;
+        top: 0;
+        background-size: 86% auto;
+      }
+      @include max($sm) {
+        background-size: 140% auto;
+      }
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 15px;
+    @include max($lg) {
+      margin-bottom: 10px;
+    }
+  }
+  p {
+    margin: 0 auto 32px;
+    max-width: 370px;
+    font-size: 18px;
+    @include max($lg) {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+    @include max($sm) {
+      font-size: 14px;
+    }
+  }
+}
+
+.section-education {
+  &.section-education-list {
+    position: relative;
+    padding: 217px 0 100px;
+    @include max($lg) {
+      padding: 150px 0 40px;
+    }
+    @include max($sm) {
+      padding: 100px 0 40px;
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+    h2 {
+      color: #fff;
+    }
+    .section-bg {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #000927;
+      clip-path: polygon(0 0, 100% 200px, 100% 100%, 0 100%);
+      @include max($huge) {
+        clip-path: polygon(0 0, 100% 140px, 100% 100%, 0 100%);
+      }
+    }
+
+    .education-articles {
+      h2 {
+        margin-bottom: 32px;
+        @include max($lg) {
+          margin-bottom: 20px;
+        }
+        @include max($sm) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .education-books {
+      .education-books-container {
+        padding: 20px 23px 34px;
+        background: $primary;
+        border-radius: 8px;
+        @include max($lg) {
+          padding: 20px;
+        }
+        @include max($sm) {
+          padding: 20px 15px;
+        }
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+      .bcard {
+        background: #c4c4c4;
+        border-radius: 4px;
+        padding: 28px 26px 23px;
+        &:not(:last-child) {
+          margin-bottom: 32px;
+        }
+        .bcard-title {
+          a {
+            color: #000;
+            &:hover {
+              color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

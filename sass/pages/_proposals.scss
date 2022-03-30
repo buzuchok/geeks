@@ -1,0 +1,164 @@
+/***** Proposals ******/
+
+.section-proposals {
+  padding: 40px 0 100px;
+  background: #f8f9fa url("../images/form-bg-line.svg") 50% 230px no-repeat;
+  background-size: 100% auto;
+  @include max($lg) {
+    padding: 40px 0;
+  }
+  .container {
+    max-width: 1304px;
+  }
+  .proposals-container {
+    padding: 52px 64px 64px;
+    @include max($lg) {
+      padding: 20px;
+    }
+    @include max($sm) {
+      padding: 20px 15px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  .proposals-offer {
+    margin-bottom: 50px;
+    .proposals-offer-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+    .proposals-offer-text {
+      font-size: 14px;
+    }
+  }
+
+  .proposals-b {
+    h2 {
+    }
+    .proposals-list {
+    }
+  }
+
+  .proposal {
+    background: #f9f9f9;
+    border: 1px solid #dde0e6;
+    border-radius: 4px;
+    padding: 32px 64px 40px 50px;
+    @include max($lg) {
+      padding: 20px;
+    }
+    @include max($sm) {
+      padding: 20px 15px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    .proposal-header {
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      @include max($md) {
+        align-items: flex-start;
+      }
+      .proposal-header-i {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        @include max($md) {
+          display: block;
+        }
+      }
+      .proposal-h-author {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        @include max($md) {
+          margin: 0 0 20px;
+        }
+        .proposal-userpic {
+          width: 57px;
+          flex: 0 0 57px;
+          margin-right: 21px;
+          @include max($lg) {
+            margin-right: 15px;
+          }
+          a {
+            line-height: 0;
+          }
+          img {
+          }
+        }
+        .proposal-author-r {
+          .proposal-username {
+            font-weight: 500;
+            margin-bottom: 5px;
+            a {
+              &:hover {
+                color: $secondary;
+              }
+            }
+          }
+          .rating {
+          }
+        }
+      }
+      .proposal-hr {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        .btn {
+        }
+      }
+      .proposal-toggler {
+        color: $grey7;
+        cursor: pointer;
+        transition: all 0.2s;
+        padding: 5px;
+        flex: 0 0 36px;
+        width: 36px;
+        margin-left: 21px;
+        @include max($sm) {
+          margin-left: 15px;
+        }
+        &:hover {
+          color: $secondary;
+        }
+        &.active {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .proposal-brief {
+      color: rgba(#000, 0.3);
+      p {
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+    .proposal-body {
+      color: rgba(#000, 0.3);
+      padding-top: 30px;
+      @include max($md) {
+        padding-top: 10px;
+      }
+      .proposal-body-title {
+        color: $grey7;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .btns {
+        margin-top: 20px;
+        .btn {
+          @include max($xxs) {
+            min-width: 100px;
+          }
+        }
+      }
+    }
+  }
+}

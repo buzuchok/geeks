@@ -1,0 +1,456 @@
+/***** Homepage *****/
+
+.tzpagination li {
+  padding: 5px;
+  margin: 5px;
+}
+.tzpagination {
+  display: flex;
+  flex-direction: row !important;
+  background-color: white !important;
+  padding: 5px;
+  margin: 5px;
+  list-style-type: none;
+}
+
+.section-intro {
+  position: relative;
+  z-index: 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: stretch;
+  min-height: 646px;
+  @include max($lg) {
+    min-height: auto;
+  }
+  .container {
+    max-width: 1216px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .intro-i {
+    padding: 0 0 50px 0;
+    @include max($lg) {
+      padding: 80px 0 120px;
+    }
+    @include max($sm) {
+      padding: 60px 0 100px;
+    }
+  }
+  h1 {
+    color: #fff;
+    font-size: 49px;
+    line-height: 1.6;
+    max-width: 680px;
+    margin-bottom: 20px;
+    @include max($lg) {
+      font-size: 36px;
+    }
+    @include max($sm) {
+      text-align: center;
+      margin: 0 auto 24px;
+      font-size: 30px;
+      max-width: 90%;
+      line-height: 1.4;
+    }
+    @include max($xxxs) {
+      max-width: 100%;
+    }
+  }
+  .btns {
+    @include max($sm) {
+      justify-content: center;
+    }
+    .btn {
+      margin-right: 30px;
+    }
+    .btn-primary {
+      min-width: 163px;
+    }
+    .btn-link {
+      color: #fff;
+      &:hover {
+        color: #eee;
+      }
+    }
+  }
+  // .video-bg {
+  //   z-index: 0;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   &:before {
+  //     content: "";
+  //     display: block;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     z-index: 1;
+  //     background: rgba(#000, 0.2);
+  //   }
+  //   img {
+  //     width: 100%;
+  //     height: 100%;
+  //     object-fit: cover;
+  //   }
+  // }
+}
+
+.section-search {
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 18px 64px rgba(32, 44, 84, 0.18);
+  border-radius: 4px;
+  padding: 10px 21px;
+  max-width: 894px;
+  margin: 0 auto;
+  @include max($lg) {
+    margin: 0 20px;
+    max-width: 100%;
+    width: auto;
+    padding: 12px 16px;
+  }
+  @include max($sm) {
+    margin: 0 16px 0;
+  }
+  @include max($xxxs) {
+    margin: 0 10px 0;
+    padding: 10px;
+  }
+  .section-search-form {
+  }
+  .search-form-w {
+    position: relative;
+    box-shadow: 0 0 0 2px #eee inset;
+    border-radius: 4px;
+    height: 62px;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 18px;
+    @include max($sm) {
+      height: 43px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 0 1px $greyd inset;
+    }
+    > .icon-w {
+      color: #b5b5b5;
+      width: 66px;
+      flex: 0 0 66px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include max($sm) {
+        display: none;
+      }
+    }
+    .form-control {
+      border: none;
+      border-radius: 0;
+      height: 62px;
+      padding-left: 0;
+      font-size: 16px;
+      background: none;
+      @include max($sm) {
+        padding-left: 16px;
+        height: 43px;
+        font-size: 14px;
+      }
+    }
+    .btn {
+      font-weight: bold;
+      height: 62px;
+      width: 194px;
+      flex: 0 0 194px;
+      font-size: 18px;
+      @include max($lg) {
+        width: 120px;
+        flex: 0 0 120px;
+      }
+      @include max($sm) {
+        width: 43px;
+        flex: 0 0 43px;
+        height: 43px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .text {
+        @include max($sm) {
+          display: none;
+        }
+      }
+      .icon-w {
+        color: #fff;
+        @include min($sm) {
+          display: none;
+        }
+      }
+    }
+  }
+  .search-tags {
+    border: 2px solid #eee;
+    border-radius: 4px;
+    padding: 10px 18px 12px;
+    margin-bottom: 18px;
+    @include max($sm) {
+      margin-bottom: 10px;
+      padding: 6px 12px;
+      border: 1px solid $greyd;
+    }
+    .label {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .search-taglist {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -5px;
+    }
+    .btn.btn-outline-light {
+      margin: 0 13px 5px 0;
+      @include max($sm) {
+        padding: 3px 8px;
+        border: 1px solid $greyd;
+        margin-right: 5px;
+        font-size: 14px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .search-params {
+    margin-bottom: -18px;
+    .form-group {
+      @include max($sm) {
+        margin-bottom: 10px;
+      }
+    }
+    .select-container.select-container-lg {
+      @include max($sm) {
+        height: 43px;
+      }
+      &:before {
+        @include max($sm) {
+          border: 1px solid $greyd;
+        }
+      }
+      &:after {
+        @include max($sm) {
+          top: 18px;
+          right: 20px;
+        }
+      }
+      select {
+        @include max($sm) {
+          height: 43px;
+          font-size: 14px;
+          padding: 10px 40px 10px 9px;
+        }
+      }
+    }
+    .form-control.form-control-lg {
+      @include max($sm) {
+        font-size: 14px;
+        height: 43px;
+        border: 1px solid $greyd;
+        padding: 0.625rem 0.75rem;
+      }
+    }
+    @include max($sm) {
+      margin-bottom: -10px;
+    }
+  }
+  &.section-search-home {
+    margin: -125px auto 0;
+    @include max($lg) {
+      margin: -100px 20px 0;
+    }
+    @include max($sm) {
+      margin: -80px 16px 0;
+    }
+    @include max($xxxs) {
+      margin: -20px 10px 0;
+    }
+  }
+}
+
+.section-gigs {
+  padding: 38px 0 0;
+  a {
+    color: #fff;
+    &:hover {
+      color: $secondary;
+    }
+  }
+  h2 {
+    margin-bottom: 12px;
+  }
+  .desc {
+    max-width: 460px;
+    color: rgba(#000, 0.8);
+  }
+  .view-all {
+    padding: 45px 0 80px;
+    text-align: center;
+    @include max($sm) {
+      padding: 15px 0 40px;
+    }
+    a {
+      color: #fff;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+  &.section-gigs-home {
+    position: relative;
+    padding-top: 20px;
+
+    &:before {
+      content: "";
+      display: block;
+      background: rgba(32, 44, 84, 0.54);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      z-index: 1;
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+    .section-bg {
+      position: absolute;
+      z-index: 0;
+      top: 36%;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #000927;
+      clip-path: polygon(0 0, 100% 55%, 100% 100%, 0 100%);
+    }
+  }
+}
+
+.section-projects {
+  h2 {
+    margin-bottom: 12px;
+  }
+  .view-all {
+    padding: 45px 0 60px;
+    text-align: center;
+    @include max($sm) {
+      padding: 15px 0 40px;
+    }
+    a {
+    }
+  }
+  &.section-projects-home {
+    color: #fff;
+    background: #000927;
+    padding: 95px 0 0;
+    @include max($lg) {
+      padding: 40px 0 0;
+    }
+    .desc {
+      max-width: 460px;
+      color: rgba(#fff, 0.6);
+    }
+    .row {
+      > [class^="col-"] {
+        display: flex;
+        align-items: stretch;
+        .card {
+          width: 100%;
+        }
+      }
+    }
+
+    .view-all {
+      a {
+        color: #fff;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+.section-home-info {
+  padding: 137px 0 90px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include max($sm) {
+    padding: 40px 0;
+  }
+  .container {
+    max-width: 1050px;
+  }
+  p {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    line-height: 2;
+    font-family: $font-heading;
+    margin-bottom: 0;
+    @include max($sm) {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.section-books {
+  padding: 80px 0 0;
+  .desc {
+    max-width: 460px;
+    color: rgba(#000, 0.8);
+  }
+  .bcard {
+    margin-bottom: 30px;
+  }
+  .view-all {
+    padding: 59px 0 89px;
+    text-align: center;
+    @include max($sm) {
+      padding: 15px 0 40px;
+    }
+    a {
+    }
+  }
+}
+
+.section-community {
+  .desc {
+    max-width: 460px;
+    color: rgba(#000, 0.8);
+  }
+  .view-all {
+    padding: 45px 0 80px;
+    text-align: center;
+    @include max($sm) {
+      padding: 30px 0 40px;
+    }
+    a {
+      &:hover {
+      }
+    }
+  }
+}

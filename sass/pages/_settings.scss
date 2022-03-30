@@ -1,0 +1,182 @@
+/***** Settings ******/
+
+.section-settings {
+  padding: 0 0 100px;
+  @include max($lg) {
+    padding: 0 0 40px;
+  }
+  .container {
+  }
+
+  .form-group {
+    label {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.settings-steps {
+  padding: 61px 0 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include max($lg) {
+    padding: 20px 0;
+  }
+  @include max($md) {
+    align-items: flex-start;
+  }
+  .settings-step {
+    display: flex;
+    align-items: center;
+    @include max($lg) {
+      padding: 0 10px;
+    }
+    @include max($md) {
+      display: block;
+      text-align: center;
+      min-width: 20%;
+    }
+    @include max($sm) {
+      padding: 0 5px;
+    }
+    &:not(:last-child) {
+      margin-right: 50px;
+      @include max($lg) {
+        margin: 0;
+      }
+    }
+    .icon-w {
+      flex: 0 0 25px;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+
+      color: #d3ffdd;
+      margin-right: 8px;
+      @include max($md) {
+        margin: 0 auto 5px;
+      }
+    }
+    .step-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.2;
+      display: block;
+      @include max($lg) {
+        font-size: 14px;
+      }
+      @include max($sm) {
+        font-size: 12px;
+      }
+      @include max($xs) {
+        font-size: 11px;
+      }
+      @include max($xxxs) {
+        font-size: 10px;
+      }
+    }
+    &.is-active {
+      .icon-w {
+        color: $green;
+      }
+    }
+  }
+  .sep {
+    color: $primary;
+    margin: 0 73px;
+    @include max($lg) {
+      margin: 0 30px;
+    }
+    @include max($sm) {
+      margin: 0 20px;
+    }
+    @include max($xs) {
+      margin: 4px 10px;
+    }
+    @include max($xxs) {
+      margin: 4px;
+    }
+    .icon-angle-right {
+      @include max($sm) {
+        width: 7px;
+      }
+    }
+  }
+}
+
+.settings-container {
+  padding: 42px 72px 50px 95px;
+  font-size: 14px;
+  @include max($xxxl) {
+    padding: 30px;
+  }
+  @include max($lg) {
+    padding: 20px;
+  }
+  @include max($sm) {
+    padding: 20px 15px;
+  }
+  .settings-photoupload {
+    margin-bottom: 70px;
+    label {
+      margin-bottom: 20px;
+    }
+  }
+  .photoupload {
+    display: flex;
+    .photo {
+      width: 100px;
+      flex: 0 0 100px;
+      margin-right: 27px;
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+    }
+    .photoupload-r {
+      padding-top: 10px;
+      flex: 1;
+    }
+  }
+
+  .settings-language {
+  }
+
+  .settings-btns {
+    margin-top: 100px;
+    @include max($lg) {
+      margin-top: 40px;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: $font-basic;
+  }
+}
+
+.section-settings-step-3 {
+  .table-settings-3 {
+    margin-bottom: 80px;
+    @include max($lg) {
+      margin-bottom: 40px;
+    }
+    th:nth-child(1),
+    td:nth-child(1) {
+      width: 270px;
+      padding-left: 0;
+    }
+    th:nth-child(2) {
+    }
+  }
+
+  .settings-3-notifications {
+  }
+}

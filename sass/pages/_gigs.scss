@@ -1,0 +1,93 @@
+/***** Gigs ******/
+
+.section-gigs-hero {
+  height: 477px;
+  padding: 116px 0 20px;
+  position: relative;
+  z-index: 1;
+  @include max($lg) {
+    padding: 80px 0 20px;
+  }
+  @include max($sm) {
+    padding: 40px 0 20px;
+  }
+  .gigs-hero-bg {
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    bottom: -60px;
+    left: 45%;
+    transform: translateX(-50%);
+    right: 0;
+    background: url("../images/create-project-line.svg") 50% 50% no-repeat;
+    background-size: contain;
+    height: 470px;
+    width: 2000px;
+    @include max($huge) {
+      left: 40%;
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      bottom: -115px;
+      left: 59%;
+      transform: translateX(-50%);
+      width: 1153px;
+      height: 596px;
+      background: url("../images/hero-bg.png") 50% 100% no-repeat;
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.section-search.section-search-gigs {
+  margin: 0 auto 0;
+  @include max($lg) {
+    margin: 0 20px 0;
+  }
+  @include max($sm) {
+    margin: 0 16px 0;
+  }
+  @include max($xxxs) {
+    margin: 0 10px 0;
+  }
+}
+
+.section-gigs {
+  &.section-gigs-list {
+    position: relative;
+    padding: 217px 0 100px;
+    @include max($lg) {
+      padding: 100px 0 40px;
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+    h2 {
+      color: #fff;
+    }
+    .section-bg {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #000927;
+      clip-path: polygon(0 0, 100% 200px, 100% 100%, 0 100%);
+      @include max($huge) {
+        clip-path: polygon(0 0, 100% 140px, 100% 100%, 0 100%);
+      }
+    }
+  }
+}

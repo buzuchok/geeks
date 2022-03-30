@@ -1,0 +1,394 @@
+/***** Users Profile ******/
+
+.section-userprofile {
+  .userprofile-img-top {
+    min-height: 350px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include max($lg) {
+      min-height: 200px;
+    }
+    @include max($sm) {
+      min-height: 150px;
+    }
+  }
+
+  .userprofile-h {
+    padding: 48px 0 29px;
+    display: flex;
+    align-items: center;
+    @include max($lg) {
+      display: block;
+      padding: 20px 0;
+    }
+    @include max($sm) {
+      padding: 20px 0;
+    }
+    .userprofile-h-info {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      @include max($lg) {
+        margin: 0 0 20px;
+      }
+    }
+
+    .userpic {
+      width: 120px;
+      flex: 0 0 120px;
+      margin-right: 32px;
+      @include max($sm) {
+        width: 80px;
+        flex: 0 0 80px;
+        margin-right: 20px;
+      }
+      img {
+        @include max($sm) {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+    .userinfo {
+      .username {
+        font-family: $font-heading;
+        font-weight: 500;
+        font-size: 34px;
+        @include max($sm) {
+          font-size: 24px;
+        }
+      }
+      .position {
+        font-weight: 300;
+      }
+    }
+    .userprofile-h-contact {
+      margin-left: auto;
+      @include max($sm) {
+      }
+      .btn-secondary {
+        font-size: 18px;
+        font-weight: bold;
+        min-width: 204px;
+        padding: 17px 30px;
+        @include max($lg) {
+          font-size: 14px;
+          padding: 0.625rem 1rem;
+          min-width: 0;
+        }
+      }
+    }
+  }
+
+  .nav-ptabs {
+  }
+
+  .userprofile-t {
+    margin-bottom: 40px;
+    @include max($lg) {
+      margin-bottom: 20px;
+    }
+    .username {
+      font-family: $font-heading;
+      font-weight: 500;
+      font-size: 34px;
+    }
+    .userstreams {
+      font-weight: 300;
+    }
+  }
+
+  .userprofile-desc {
+    margin-bottom: 50px;
+    @include max($lg) {
+      margin-bottom: 20px;
+    }
+    .label {
+      font-family: $font-heading;
+      font-weight: 500;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .text {
+      p {
+      }
+    }
+  }
+  .userprofile-details-blocks {
+    margin-bottom: 100px;
+    @include max($lg) {
+      margin-bottom: 50px;
+    }
+  }
+  .userprofile-details-block {
+    border-top: 1px solid $greyd;
+    font-family: $font-heading;
+    padding: 12px 0;
+    .userprofile-details-line {
+      padding: 7px 0;
+      .label {
+        font-weight: 500;
+      }
+      .val {
+      }
+    }
+    &.userprofile-details-block-1 {
+      .userprofile-details-line {
+        .label {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    padding-bottom: 77px;
+    &.tab-content-2 {
+      position: relative;
+      .container {
+        position: relative;
+        z-index: 1;
+      }
+      .tab-bg {
+        position: absolute;
+        z-index: 0;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #000927;
+        clip-path: polygon(0 0, 100% 200px, 100% 100%, 0 100%);
+        @include max($huge) {
+          clip-path: polygon(0 0, 100% 140px, 100% 100%, 0 100%);
+        }
+      }
+    }
+    &.tab-content-3 {
+      position: relative;
+      .container {
+        position: relative;
+        z-index: 1;
+      }
+      .tab-bg {
+        position: absolute;
+        z-index: 0;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #000927;
+        clip-path: polygon(0 0, 100% 200px, 100% 100%, 0 100%);
+        @include max($huge) {
+          clip-path: polygon(0 0, 100% 140px, 100% 100%, 0 100%);
+        }
+      }
+    }
+  }
+}
+
+.userprofile-reviews {
+  max-width: 671px;
+  .reviews-summary {
+    border-bottom: 2px solid rgba(32, 44, 84, 0.17);
+    margin-bottom: 36px;
+    padding-bottom: 26px;
+  }
+  .reviews-summary-h {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    @include max($md) {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  .reviews-summary-rating {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    @include max($md) {
+      margin: 0 0 10px;
+    }
+    @include max($sm) {
+      display: block;
+    }
+    .rating-label {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: $font-heading;
+      margin-right: 16px;
+      @include max($sm) {
+        margin: 0 0 10px;
+      }
+    }
+    .rating-val-w {
+      display: flex;
+      align-items: center;
+    }
+    .rating {
+      margin-right: 15px;
+      .rating-current {
+      }
+      .rating-total {
+      }
+    }
+    .rating-val {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+  .reviews-summary-sort {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    .label {
+      font-weight: 500;
+      font-size: 18px;
+      margin-right: 10px;
+      white-space: nowrap;
+      @include max($sm) {
+        font-size: 14px;
+      }
+    }
+    .select-container {
+    }
+  }
+
+  .rating-summary-details {
+    display: flex;
+    align-items: flex-start;
+    @include max($md) {
+      display: block;
+    }
+  }
+  .rating-summary-starbars {
+    width: 55%;
+    flex: 0 0 55%;
+    margin-right: 20px;
+    @include max($md) {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+    .starbar {
+      display: flex;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+        @include max($md) {
+          margin-bottom: 10px;
+        }
+      }
+      .starbar-label {
+        font-weight: 500;
+        font-size: 18px;
+        width: 80px;
+        flex: 0 0 80px;
+        padding-right: 20px;
+        @include max($sm) {
+          font-size: 14px;
+        }
+      }
+      .progress {
+        flex: 1;
+      }
+    }
+  }
+  .rating-summary-breakdown {
+    margin-left: auto;
+    width: 39%;
+    flex: 0 0 39%;
+    @include max($md) {
+      width: 100%;
+      margin: 0;
+    }
+    .breakdown-label {
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 20px;
+      @include max($sm) {
+        font-size: 14px;
+      }
+    }
+    .breakdown-items {
+    }
+    .breakdown-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+        @include max($md) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .breakdown-item-label {
+      font-size: 14px;
+      margin-right: 20px;
+    }
+    .breakdown-item-val {
+      display: flex;
+      align-items: center;
+      .num {
+        font-size: 14px;
+        margin: 2px 3px 0 0;
+      }
+      .icon-w {
+      }
+    }
+  }
+}
+
+.section-modal.section-modal-contact {
+  .vm--modal {
+    padding: 43px;
+    @include max($lg) {
+      padding: 20px;
+    }
+    @include max($sm) {
+      padding: 20px 16px;
+    }
+    .modal-close {
+      top: 52px;
+      right: 44px;
+      @include max($lg) {
+        top: 20px;
+        right: 20px;
+      }
+      @include max($sm) {
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+  h2 {
+    margin: 0 50px 32px 0;
+    @include max($lg) {
+      margin: 0 40px 20px 0;
+    }
+    @include max($sm) {
+      font-size: 30px;
+      margin: 0 30px 10px 0;
+    }
+  }
+  .form-group {
+    margin-bottom: 28px;
+    @include max($lg) {
+      margin-bottom: 20px;
+    }
+    @include max($sm) {
+    }
+  }
+  textarea.form-control {
+    padding: 24px 32px;
+    @include max($lg) {
+      padding: 0.625rem 0.75rem;
+    }
+  }
+  .btns {
+    .btn {
+      min-width: 143px;
+    }
+  }
+}

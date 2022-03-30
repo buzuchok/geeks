@@ -1,0 +1,58 @@
+/***** Denied ******/
+
+.section-denied {
+  background: #f8f9fa url("../images/form-bg-line.svg") 50% 50% no-repeat;
+  background-size: cover;
+  padding: 55px 0 100px;
+  text-align: center;
+  @include max($lg) {
+    padding: 40px 0;
+  }
+  .container {
+    max-width: 1038px;
+  }
+  .denied-icon {
+    width: 200px;
+    height: 200px;
+    background: $greyf;
+    border: 1px solid rgba(32, 44, 84, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 35px;
+    @include max($lg) {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+    }
+    .icon-w {
+      color: $primary;
+      @include max($lg) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+  .denied-message {
+    padding: 62px 50px 280px;
+    @include max($lg) {
+      padding: 40px 20px;
+    }
+    h1 {
+      margin-bottom: 38px;
+      color: $primary;
+      @include max($sm) {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+    }
+    p {
+      font-size: 21px;
+      margin: 0 auto;
+      @include max($sm) {
+        font-size: 16px;
+      }
+    }
+  }
+}
